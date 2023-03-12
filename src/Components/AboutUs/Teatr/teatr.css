@@ -1,0 +1,87 @@
+.teatr__main{
+    position: relative;
+    z-index: -100;
+}
+.teatr_main_img{
+    width: 100%;
+    height: 350px;
+}
+.back__color{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 60%;
+    columns: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text__menu{
+    display: flex;
+}
+.teatr__text__item{
+    margin: 0px 10px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+.about__teatr{
+    width: 60% !important;
+}
+.teatr__li{
+    list-style-type: square;
+}
+.pages__teatr{
+    width: 400px;
+    border: 1px solid rgb(214, 212, 212);
+    border-radius: 10px;
+}
+/* .pages__teatr li:hover{
+    color: #FEA108;
+    cursor: pointer;
+} */
+.last__new_text__corner{
+    font-size: 15px;
+    font-weight: 600;
+}
+.crumbs{
+    list-style-type: square;
+    display: flex;
+}
+.crumbs li{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 5px;
+}
+.crumbs-item{
+    transition: 0.2s;
+    color: #FFF;
+}
+.main-item{
+    color: #FEA108;
+}
+.__back_img{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 350px;
+  background-image: url("../../../../public//images/big_img.jpg");
+}
+@media(max-width:490px){
+    .crumbs li{
+        font-size: 15px;
+    }
+}

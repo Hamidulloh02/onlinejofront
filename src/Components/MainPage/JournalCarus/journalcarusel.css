@@ -1,0 +1,15 @@
+.Carusjournal{
+    width: 100%;
+}
+.CarusMain{
+    width: 80%;
+    margin: 0 auto;
+}
+.CarusItem img{
+    width: 200px;
+    height: 250px;
+    padding: 5px 10px;
+}
+.CarusItem{
+    width: 20px;
+}

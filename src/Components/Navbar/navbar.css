@@ -1,0 +1,254 @@
+.navbar{
+        --bs-navbar-padding-x: none !important;
+}
+.main__navbar{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+}
+.nav__logo{
+    width: 160px;
+    padding: 0;
+    margin: 0;
+}
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    color: black !important;
+}
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+
+.main__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.myNav{
+   display: flex !important;
+   flex-direction: row !important;
+   justify-content: center !important;
+   flex-grow: 0 !important;
+}
+.main__search{
+ border: 1px solid rgb(171, 170, 170);
+ padding: 4px 0;
+ border-radius: 5px;
+}
+.search__inp{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.search__icon{
+    font-size: 25px;
+    margin: 3px;
+}
+.menu__tit{
+    font-size:16px;
+    margin: 0 10px;
+    font-weight:600;
+}
+.menu__tit:hover{
+    color: #FEA108 !important;
+}
+.icon_toggle{
+    /* margin-left: 215px; */
+}
+/* scrol */
+.navar.fixed{
+    background-color: black;
+}
+.All__class__nav{
+    box-shadow: 0px  0px 5px grey;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000 !important;
+    background-color: #FFF;
+    height: 70px;
+}
+.All__class__fix{
+    height:90px;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px  0px 5px grey;
+    z-index: 1000 !important;
+
+}
+#basic-navbar-nav{
+    background-color: #FFF;
+    z-index: 1001;
+    transform: translateY(-16px);
+}
+.animated{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Last menu mobile*/
+.Last__Mobile__menu{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 0px 2px  rgb(234, 232, 232);line-height: 30px;
+}
+.coursor__menu{
+    position: absolute;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(45deg) translateY(-20px);
+    border:red;
+}
+
+/* Navbar css */
+.NavMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Menu{
+    display: flex;
+}
+.MenuItem{
+    margin: 0 20px;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.Mobile__Item{
+    font-size: 16px;
+}
+.Mobile__Item:hover{
+    background-color: #FEA108;
+    color: white;
+    padding: 0px 5px;
+}
+.dropDown:hover{
+    color: #FEA108;
+    cursor: pointer;
+}
+/* .dropDown:hover ~ .dropMenu{
+    display: block;
+} */
+.NavLogo img{
+    width: 100%;
+}
+.NavLogo{
+    position: relative;
+    width: 160px;
+}
+/* Mobile nav */
+.All__class__nav{
+    box-shadow: 0px  0px 5px grey;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000 !important;
+    background-color: #FFF;
+    height: 82px;
+    transition: 0.5s;
+}
+.All__class__fix{
+    height:90px;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px  0px 5px grey;
+    z-index: 1000 !important;
+    transition: 0.5s;
+
+}
+.Last__Mobile__menu{
+    transition: 0.8s;
+    z-index: 1000 !important;
+}
+.NavMobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MobileLogo{
+    position: relative;
+    width: 150px;
+    margin-top: 10px;
+}
+.MobileLogo img{
+    width: 100%;
+}
+.icon_toggle{
+    font-size: 25px;
+}
+.mobile_nav_full_main{
+    display: none;
+}
+.menuhover{
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    transform: translateY(-10px);
+}
+.search_inp{
+    outline: none;
+    border: none;
+}
+.menuhover:hover{
+ color: #FEA108 !important;
+ background-color: #FFF !important;
+}
+.MenuHover{
+    transition: 0.2s;
+}
+.MenuHover:hover{
+    transition: 0.2s;
+    color: #FEA108;
+}
+.main_menu_tit{
+    transform: translateY(-30px);
+    padding: 0px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.canta__images{
+    width: 70px !important;
+    position: absolute;
+    left: 10px;
+    bottom:41px;
+}
+
+/* Search */
+.NavSearch{
+    border: 2px solid grey;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+.search_icon{
+    font-size: 25px;
+}
+@media(max-width:990px){
+.NavMain{
+  display: none;
+}
+.mobile_nav_full_main{
+    display: block;
+}
+.canta_hat_mobile{
+    width: 70px !important;
+    position: absolute;
+    left: 9px;
+    bottom: 40px;
+}
+}

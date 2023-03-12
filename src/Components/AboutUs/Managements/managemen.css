@@ -1,0 +1,24 @@
+.managments__imgs{
+    padding: 10px;
+    border-radius: 10px !important;
+}
+.managment__full{
+    z-index: -100 !important;
+}
+.managment__menu{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 350px;
+    background-image: url("../../../../public/images/big_img.jpg");
+}
+.maneg__back__color{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+}

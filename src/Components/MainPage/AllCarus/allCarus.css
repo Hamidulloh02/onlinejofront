@@ -1,0 +1,11 @@
+.allCarusMobile{
+    display: none;
+}
+@media(max-width:1450px){
+    .allCarusDekstop{
+        display: none;
+    }
+    .allCarusMobile{
+       display: block;
+    }
+}

@@ -1,0 +1,11 @@
+
+.full__video{
+    width: 82.5% !important;
+    margin: 0 auto;
+}
+.slider-nav.slider-nav-next::after{
+    background-color: black !important;
+}
+.slider-nav::after{
+    background-color: black;
+}
