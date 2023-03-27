@@ -52,68 +52,58 @@ export default function BasicTabs(props) {
   const [data, setdata] = useState([])
   const [Yangiliklardata, setYangiliklardata] = useState([])
   const [Maqolalardata, setMaqolalardata] = useState([])
-  const [Journaldata, setjournaldata] = useState([])
+  const [Journaldata, setJournaldata] = useState([])
   const [Arxivdata, setArxivdata] = useState([])
   const [number, setnumber] = useState([])
   const [page, setPage] = useState(1)
   const [countPage , setCountPage] = useState(0)
   let location = useLocation()
+  console.log(process.env.REACT_APP_API)
   useEffect(() => {
-    axios.get("http://localhost:8000/api")
-      .then((res) => {
-        setdata(res.data)
-        var YangilikFilter = res.data.filter(news => { return (news.category.name === "Yangiliklar") });
-        var MaqolalarFilter = res.data.filter(news => { return (news.category.name === "Maqolalar") });
-        var JurnalsahifalaridaFilter = res.data.filter(news => { return (news.category.name === "Jurnal sahifalarida") });
-        var ArxivFilter = res.data.filter(news => { return (news.category.name === "Arxiv") });
-        let currentYangilik = []
-        let currentMaqola  = []
-        let currentJurnal = []
-        let currentArxiv = []
-        setCountPage(Math.ceil(YangilikFilter.length / 3))
-        for(let i=3*page - 3; i<3*page; i++){
-          if(YangilikFilter[i]){
-            currentYangilik.push(YangilikFilter[i])
-            currentMaqola.push(MaqolalarFilter[i])
-            currentJurnal.push(JurnalsahifalaridaFilter[i])
-            currentArxiv.push(ArxivFilter[i])
-          }
-        }
-        setYangiliklardata(currentYangilik)
-        setMaqolalardata(currentMaqola)
-        setArxivdata(currentArxiv)
-        setjournaldata(currentJurnal)
-
-        // setMaqolalardata(MaqolalarFilter)
+      setCountPage(100) 
+      axios.get(`${process.env.REACT_APP_API}/api/pagination?page=${page}&search=Yangiliklar`)
+      .then((ress) => {
+        setYangiliklardata(ress.data.results)
       })
-
+      axios.get(`${process.env.REACT_APP_API}/api/pagination?page=${page}&search=Maqolalar`)
+      .then((ress) => {
+        setMaqolalardata(ress.data.results)
+      })
+      axios.get(`${process.env.REACT_APP_API}/api/pagination?${page}&search=Arxiv`)
+      .then((ress) => {
+        setArxivdata(ress.data.results)
+      })
+      axios.get(`${process.env.REACT_APP_API}/api/pagination?${page}&search=Jurnal+sahifalarida`)
+      .then((ress) => {
+        setJournaldata(ress.data.results)
+      })
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
   }, [page])
- 
+  console.log(Yangiliklardata)
   const handleChange = (event, newValue) => {
     setValue(newValue)
   };
   const handleChangePage = (event, value) => {
     setPage(value);
   };
+
   return (
     <Box sx={{ width: '100%' }} className="news__select_menu">
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={location.state.id || value}
+        <Tabs value={location.state.id }
           onChange={handleChange}
           aria-label="basic tabs example"
           variant="scrollable"
           scrollButtons="auto"
           className='select__menu'>
-          <Tab label={<div className='new__btn'>Yangiliklar</div>} {...a11yProps(0)} />
-          <Tab label={<div className='new__btn'>Maqolalar</div>} {...a11yProps(1)} />
-          <Tab label={<div className='new__btn'>Jurnal sahifalarida</div>} {...a11yProps(2)} />
-          <Tab label={<div className='new__btn'>Arxiv</div>} {...a11yProps(3)} />
-          {/* <Tab label={<div className='new__btn'>Navo</div>} {...a11yProps(4)} /> */}
+          <Tab label={<div className='new__btn'>Yangiliklar</div>} {...a11yProps(location.state.id)} />
+          <Tab label={<div className='new__btn'>Maqolalar</div>} {...a11yProps(location.state.id)} />
+          <Tab label={<div className='new__btn'>Jurnal sahifalarida</div>} {...a11yProps(location.state.id)} />
+          <Tab label={<div className='new__btn'>Arxiv</div>} {...a11yProps(location.state.id)} />
         </Tabs>
       </Box>
-      <TabPanel value={location.state.id || value} index={0}>
+      <TabPanel value={location.state.id } index={0}>
         <div className="container new__full mt-5">
           <div className="row">
             {
@@ -139,7 +129,7 @@ export default function BasicTabs(props) {
         </div>
         <Pagination page={page} onChange={handleChangePage}  count={countPage} color="primary" />
       </TabPanel>
-      <TabPanel value={location.state.id || value} index={1}>
+      <TabPanel value={location.state.id } index={1}>
         <div className="container new__full mt-5">
           <div className="row">
             {
@@ -165,7 +155,7 @@ export default function BasicTabs(props) {
         </div>
         <Pagination page={page} onChange={handleChangePage}  count={countPage} color="primary" />
       </TabPanel>
-      <TabPanel value={location.state.id || value} index={2}>
+      <TabPanel value={location.state.id } index={2}>
         <div className="container new__full mt-5">
           <div className="row">
             {
@@ -191,7 +181,7 @@ export default function BasicTabs(props) {
         </div>
         <Pagination page={page} onChange={handleChangePage}  count={countPage} color="primary" />
       </TabPanel>
-      <TabPanel value={location.state.id || value} index={3}>
+      <TabPanel value={location.state.id } index={3}>
         <div className="container new__full mt-5">
           <div className="row">
             {

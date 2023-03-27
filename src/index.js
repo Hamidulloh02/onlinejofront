@@ -28,7 +28,6 @@ root.render(
       <Route path='/information' element={<Fullnews/>}/>
       <Route path='/arxiv' element={<ArxivMain/>}/>
       {/* <Route path='/arxivtada' element={<ArxivFull/>}/> */}
-      <Route path='http://localhost:8000/admin/'/>
     </Route>
   </Routes>
   </BrowserRouter>

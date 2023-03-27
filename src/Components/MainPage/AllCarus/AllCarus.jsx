@@ -9,7 +9,7 @@ import "./allCarus.css"
 function AllCarus() {
     const [dataAll,setdataAll] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:8000/api")
+        axios.get("http://127.0.0.1:8000/api")
         .then((res) => {
             setdataAll(res.data)
         })

@@ -20,7 +20,7 @@ function NewsCarus(props) {
     const  [dataFive ,  setdataFive] = useState([])
     const [Alldata,setAlldata] = useState([])
     useEffect(() => {
-    axios.get("http://localhost:8000/api")
+    axios.get(process.env.React_APP_API+"api")
     .then((res) => {
       setAlldata()
       let currentData = []
@@ -29,7 +29,7 @@ function NewsCarus(props) {
           setdataFive([...currentData])
       }
     })
-    })
+    },[])
     let data = props.data
     let title = props.title 
   return (
