@@ -17,9 +17,9 @@ function NewsCarus(props) {
     const  [dataFive ,  setdataFive] = useState([])
     const [Alldata,setAlldata] = useState([])
     useEffect(() => {
-    axios.get(process.env.React_APP_API+"api")
+    axios.get(process.env.REACT_APP_API+"/api")
     .then((res) => {
-      setAlldata()
+      setAlldata(res.data.result)
       let currentData = []
       for(let i = 0 ; i<5 ; i++){
           currentData.push(res.data[i])

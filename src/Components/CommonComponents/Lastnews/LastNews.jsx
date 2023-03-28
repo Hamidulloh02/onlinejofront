@@ -8,7 +8,7 @@ function LastNews(props) {
     const  [dataFive ,  setdataFive] = useState([])
     let data = []
     useEffect(() => {
-        axios.get("http://localhost:8000/api")
+        axios.get(process.env.REACT_APP_API + "/api")
             .then((res) => {
                 // setarray(res.data)
                 let currentData = []

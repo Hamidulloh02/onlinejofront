@@ -9,7 +9,7 @@ import "./allCarus.css"
 function AllCarus() {
     const [dataAll,setdataAll] = useState([])
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api")
+        axios.get(process.env.REACT_APP_API + "/api")
         .then((res) => {
             setdataAll(res.data)
         })
@@ -21,7 +21,7 @@ function AllCarus() {
         var JurnalsahifalaridaFilter = dataAll.filter(news => { return (news.category.name === "Jurnal sahifalarida") });
         var MaqolalarFilter = dataAll.filter(news => { return (news.category.name === "Maqolalar") });
       }
-
+  console.log(dataAll)
   return (
     <>
     <div className='allCarusDekstop'>

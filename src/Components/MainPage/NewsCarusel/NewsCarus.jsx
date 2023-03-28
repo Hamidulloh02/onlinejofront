@@ -20,9 +20,9 @@ function NewsCarus(props) {
     const  [dataFive ,  setdataFive] = useState([])
     const [Alldata,setAlldata] = useState([])
     useEffect(() => {
-    axios.get(process.env.React_APP_API+"api")
+    axios.get(process.env.REACT_APP_API+"/api")
     .then((res) => {
-      setAlldata()
+      setAlldata(res.data)
       let currentData = []
       for(let i = 0 ; i<5 ; i++){
           currentData.push(res.data[i])
@@ -58,8 +58,9 @@ function NewsCarus(props) {
                                       src={e.profile} />
                                         {/* <img className='slider__img' src={e.profile} alt="" />   */}
                                       <h6 className='news__carus__title_desktop ps-2' ><Link to="/information" state={data[i]} className='new_carus_title'>{e.title}</Link> </h6>
-                                      <div className='d-flex '>
+                                      <div className='d-flex '>                                   
                                        <button className='btn_btn_yellow'>{e.category.name}</button>
+                                       {console.log(e.category.name)}
                                         <div className='mt-2 date_hour'> {((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</div>
                                       </div>
                                     </div>

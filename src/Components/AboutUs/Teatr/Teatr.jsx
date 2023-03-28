@@ -13,9 +13,9 @@ function Teatr() {
     const [array, setarray] = useState([])
     let data = []
     useEffect(() => {
-        axios.get("http://localhost:8000/api/v1/?limit=6&offset=0")
+        axios.get(process.env.REACT_APP_API + "/api")
             .then((res) => {
-                setarray(res.data.results)
+                setarray(res.data)
             })
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
