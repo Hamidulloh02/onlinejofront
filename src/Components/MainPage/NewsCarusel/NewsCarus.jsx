@@ -118,7 +118,6 @@ function NewsCarus(props) {
         </div> */}
     </div> 
     </>
-
   )
 }
 window.addEventListener("load", () => {

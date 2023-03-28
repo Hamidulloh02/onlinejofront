@@ -73,7 +73,7 @@ export default function BasicTabs(props) {
       .then((ress) => {
         setArxivdata(ress.data.results)
       })
-      axios.get(`${process.env.REACT_APP_API}/api/pagination?${page}&search=Jurnal+sahifalarida`)
+      axios.get(`${process.env.REACT_APP_API}/api/pagination?${page}&search=Jurnaldan`)
       .then((ress) => {
         setJournaldata(ress.data.results)
       })
@@ -99,7 +99,7 @@ export default function BasicTabs(props) {
           className='select__menu'>
           <Tab label={<div className='new__btn'>Yangiliklar</div>} {...a11yProps(location.state.id)} />
           <Tab label={<div className='new__btn'>Maqolalar</div>} {...a11yProps(location.state.id)} />
-          <Tab label={<div className='new__btn'>Jurnal sahifalarida</div>} {...a11yProps(location.state.id)} />
+          <Tab label={<div className='new__btn'>Jurnaldan</div>} {...a11yProps(location.state.id)} />
           <Tab label={<div className='new__btn'>Arxiv</div>} {...a11yProps(location.state.id)} />
         </Tabs>
       </Box>

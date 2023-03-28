@@ -18,7 +18,7 @@ function AllCarus() {
     {
         var YangilikFilter = dataAll.filter(news => { return (news.category.name === "Yangiliklar") });
         var ArxivFilter = dataAll.filter(news => { return (news.category.name === "Arxiv") });
-        var JurnalsahifalaridaFilter = dataAll.filter(news => { return (news.category.name === "Jurnal sahifalarida") });
+        var JurnalsahifalaridaFilter = dataAll.filter(news => { return (news.category.name === "Jurnaldan") });
         var MaqolalarFilter = dataAll.filter(news => { return (news.category.name === "Maqolalar") });
       }
   console.log(dataAll)
@@ -27,7 +27,7 @@ function AllCarus() {
     <div className='allCarusDekstop'>
         <NewsCarus data={YangilikFilter} title={"Yangiliklar"}/>
         <NewsCarus data={MaqolalarFilter} title={"Maqolalar"}/>
-        <NewsCarus data={JurnalsahifalaridaFilter} title={"Jurnal sahifalarida"}/>
+        <NewsCarus data={JurnalsahifalaridaFilter} title={"Jurnaldan"}/>
         <NewsCarus data={ArxivFilter} title={"Arxiv"}/>
     </div>    
     <div className='allCarusMobile'>

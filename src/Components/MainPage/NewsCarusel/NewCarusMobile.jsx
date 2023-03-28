@@ -46,7 +46,7 @@ function NewsCarus(props) {
                             <div className='col-9'>
                                 <div className='mobile__new_title'>
                                     <h6 className='news__carus__title_mobile' ><Link to="/information" className='news__carus__title_mobile'  state={data[i]}>{e.title}</Link> </h6>
-                                    <div><Link to="/yangiliklar"><button className='mobile__new_btn'>{e.category.name}</button></Link>{((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</div>
+                                    <div><Link ><button className='mobile__new_btn'>{e.category.name}</button></Link>{((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</div>
                                 </div>
                             </div>   
                             </div>
