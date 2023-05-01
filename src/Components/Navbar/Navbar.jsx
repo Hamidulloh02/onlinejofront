@@ -49,8 +49,8 @@ function Navbar() {
                             </li>
                             <li className='MenuItem'><Link to={'/yangiliklar'+"?search=Yangiliklar"} state={{ id: 0 }} className='link MenuHover'>Yangiliklar</Link></li>
                             <li className='MenuItem'><Link to={"/yangiliklar"+"?search=Maqolalar"} state={{ id: 1 }} className='link MenuHover'>Maqolalar</Link></li>
-                            <li className='MenuItem'><Link to="/yangiliklar" state={{ id: 2 }} className='link MenuHover'>Jurnaldan</Link></li>
-                            <li className='MenuItem'><Link to={"/yangiliklar" + "?search=Arxiv"} state={{ id: 3 }} className='link MenuHover'>Arxiv</Link></li>
+                            <li className='MenuItem'><Link to={"/yangiliklar"+"?search=Jurnaldan"} state={{ id: 2 }} className='link MenuHover'>Jurnaldan</Link></li>
+                            <li className='MenuItem'><Link to={"/yangiliklar" +"?search=Arxiv"} state={{ id: 3 }} className='link MenuHover'>Arxiv</Link></li>
                         </ul>
                     </div>
                     <div className='NavSearch'>
@@ -92,7 +92,7 @@ function Navbar() {
                                     </NavDropdown>
                                 </li>
                                 <li className='Mobile__Item' onClick={(() => { { setisOpen(true) } { setisMobile(false) } })}>
-                                    <span><Link to={`/yangiliklar`+"search=Jurnal+sahifalarida"} state={{ id: 0 }} className='link'>Yangiliklar</Link> </span> </li>
+                                    <span><Link to="/yangiliklar" state={{ id: 0 }} className='link'>Yangiliklar</Link> </span> </li>
                                 <li className='Mobile__Item' onClick={(() => { { setisOpen(true) } { setisMobile(false) } })}>
                                     <span><Link to="/yangiliklar" state={{ id: 1 }} className='link'>Maqolalar</Link> </span> </li>
                                 <li className='Mobile__Item' onClick={(() => { { setisOpen(true) } { setisMobile(false) } })}>

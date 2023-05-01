@@ -18,7 +18,6 @@ function LastNews(props) {
                 }
             })
     }, [])
-    console.log(array)
     return (
         <div>
             <ul className='pages__teatr'>
@@ -38,13 +37,13 @@ function LastNews(props) {
                         dataFive.map((e,i) => {
                             return(
                                 <>
-                        <div className="row mt-1 lower__menu__item">
+                        <div className="row mt-1 lower__menu__item" key={i}>
                             <div className="col-4">
                                 <img className='lest_new_img' src={e.profile} alt="" />
                             </div>
-                            <div className="col-8">
+                            <div className="col-8 lastnewsfull">
                                 <div>
-                                    <p className='last__new_text__corner'><Link to="/information" state={dataFive[i]}  className='teatr_page_title'>{e.title}</Link></p>
+                                    <p className='last__new_text__corner'><Link to={`/news/${e.id}`} state={dataFive[i]}  className='teatr_page_title'>{e.title}</Link></p>
                                 </div>
                                 <div>
                                     <AiOutlineClockCircle className='icon' /><span className='last__new_data__corner'>{((e.created_at).toString()).slice(0, 10)} | {((e.created_at).toString()).slice(11, 16)}</span>

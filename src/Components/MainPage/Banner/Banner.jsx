@@ -28,9 +28,9 @@ function Banner() {
                     </div>
                     <p>Endi siz jurnallarimizni o‘zingiz istagan paytda, istalgan joyda o‘qishingiz mumkin.</p>
                     <Link to="/contact" className='link__obuna'><button className='main__btn'>Obuna bo‘ling</button></Link>
-                    <a to='https://t.me/online_journal_uz' className='link__obuna'><button className='main__btn02 mt-2'>Elektron jurnal xarid qilish</button></a>
+                    <a href='https://t.me//Gule_akbarovna' className='link__obuna'><button className='main__btn02 mt-2'>Elektron jurnal xarid qilish</button></a>
                   </div>
-                </div>
+                </div> 
               </div>
               <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12'>
                 <div className="banner__02">

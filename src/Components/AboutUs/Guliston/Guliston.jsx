@@ -2,6 +2,8 @@ import React,{useEffect} from 'react'
 import LastNews from '../../CommonComponents/Lastnews/LastNews'
 import "../Teatr/teatr.css"
 import {Link} from "react-router-dom"
+//lazy
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // import json 
 import gulistonjson from "./gulistomjson.json"
@@ -29,6 +31,13 @@ function Guliston() {
         <div className="row">
             <div className="col-lg-8 col-md-6 col-sm-12">
                 <h3 className='text-center m-4'>“Guliston” jurnali haqida</h3>
+                <div className='InformationPage'>
+                <LazyLoadImage
+                    className='InformationPageImg'
+                    alt="AboutWeImg"
+                    effect="blur"
+                    src="./images/TeatrCarus/teatr04.jpg" />
+                </div>
                 <br />
                 <p>Dastlab “Yer yuzi” (1925-1931), “O‘zbekiston qurilishda” (1932), “Mash’ala” (1934) nomlari bilan jami 202 soni chiqqan. 1935 yil fevraldan hozirgi nomda nashr etilgan. “Guliston”ni nashr etish 1941-1967 yilgacha vaqtincha to‘xtatilgan. Keyinchalik unga Ibrohim Rahim (1967-1969), Asqad Muxtor (1969-1980), Mirmuhsin (1980-1993) Tilab Mahmudov (1994-2002) muharrirlik qilgan.</p>
                 <br />

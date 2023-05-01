@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Banner from './Banner/Banner'
 import Carusel from './Carusel/Carusel'
+import Carus from './Carusel/Carus'
 import Journalcarusel from './JournalCarus/Journalcarusel'
 import Maqolalar from './Maqolalar/Maqolalar'
 import Yangiliklar from './Yangiliklar/Yangiliklar'
@@ -14,7 +15,8 @@ import newsJson from "../../Components/MainPage/NewsCarusel/newCarus.json"
 function index() {
   return (
     <div>
-      <Carusel />
+      {/* <Carusel/> */}
+      <Carus/>
       <Banner />
       <AllCarus/>
       {/* <NewsCarus data={newsJson} class="carusdiv"/> */}

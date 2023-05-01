@@ -71,7 +71,7 @@
     background-color: #FFF;
     height: 70px;
 }
-.All__class__fix{
+/* .All__class__fix{
     height:90px;
     top: 0;
     left: 0;
@@ -79,7 +79,7 @@
     box-shadow: 0px  0px 5px grey;
     z-index: 1000 !important;
 
-}
+} */
 #basic-navbar-nav{
     background-color: #FFF;
     z-index: 1001;
@@ -152,17 +152,17 @@
 }
 /* Mobile nav */
 .All__class__nav{
-    box-shadow: 0px  0px 5px grey;
-    position: fixed !important;
+    width: 100%;
+    height:90px;
     top: 0;
     left: 0;
     right: 0;
-    z-index:1000 !important;
-    background-color: #FFF;
-    height: 82px;
+    box-shadow: 0px  0px 5px grey;
+    z-index: 1000 !important;
     transition: 0.5s;
 }
 .All__class__fix{
+    width: 100%;
     height:90px;
     top: 0;
     left: 0;

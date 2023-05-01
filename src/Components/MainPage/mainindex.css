@@ -4,6 +4,7 @@
     margin: 100px auto;
     background-color: #053D32;
     border-radius: 10px;
+    max-width: 1280px;
 }
 .gmap_iframe{
     width: 95%;

@@ -61,6 +61,14 @@ transition: 0.7s;
     border-radius: 10px;
 
 }
+.news__select_menu{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.categoryTitlename{
+    font-weight: 600;
+    color: #014E46;
+}
 .new__btn{
     border: none;
     background-color: #014E46;

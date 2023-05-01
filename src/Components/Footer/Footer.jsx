@@ -43,7 +43,7 @@ function Footer() {
                         <li  className='footer_tit'>ALOQA</li>
                         <li className='footer_item'>E-pochta va telefon raqamlar:</li>
                         <li className='footer_item'><MdOutlineMail className='me-1'/>info@online-journal.uz</li>
-                        <li className='footer_item'><AiTwotonePhone className='me-1'/>+998 71 244 60</li>
+                        <li className='footer_item'><AiTwotonePhone className='me-1'/>+998 71 244 41 60</li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +54,7 @@ function Footer() {
                    <Link><li className='netwok_item text-primary'><BsFacebook/></li></Link> 
                    <Link><li className='netwok_item text-danger'><BsInstagram/></li></Link> 
                    <Link href='https://t.me/online_journal_uz'><li className='netwok_item text-primary'><BsTelegram/></li></Link>                     
-                   <Link><li className='netwok_item text-danger'><BsYoutube/></li></Link>
+                   <Link  href='https://www.youtube.com/@onlaynjurnalgulistonvateat3190'><li className='netwok_item text-danger'><BsYoutube/></li></Link>
                 </ul>
             </div>
         </div>

@@ -2,32 +2,66 @@ import Carousel from 'react-bootstrap/Carousel';
 import "./carusel.css"
 function IndividualIntervalsExample() {
   return (
-    <Carousel className='carus__full__main '>
-      <Carousel.Item >
-        <img
-          className="d-block w-100 carus__images"
-          src="./images/pegas02.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          {/* <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item >
-        <img
-          className="d-block w-100 carus__images"
-          src="./images/faktorRek.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          {/* <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+<div class="swiffy-slider slider-indicators-round">
+    <ul class="slider-container">
+        <li>
+            <div id="slide1">
+              <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide2">
+            <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide3">
+            <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide4">
+            <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide5">
+            <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide6">
+            <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide7">
+            <img src="./images/Reklama.jpg" alt="" />
+            </div>
+        </li>
+        <li>
+            <div id="slide8"></div>
+        </li>
+        <li>
+            <div id="slide9"></div>
+        </li>
+    </ul>
+
+    <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button>
+
+    <ul class="slider-indicators">
+        <li class=""></li>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
   );
 }
 

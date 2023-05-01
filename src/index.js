@@ -13,6 +13,9 @@ import Contact from './Components/AboutUs/Contact/Contact';
 import Fullnews from './Components/FullNews/Fullnews';
 import ArxivMain from './Components/TeatrArxiv/ArxivMain';
 import ArxivFull from "./Components/TeatrArxiv/ArxivFull"
+//bootstrap
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,8 +27,9 @@ root.render(
       <Route path='/guliston' element={<Guliston/>}/>
       <Route path='/management' element={<Management/>}/>
       <Route path='/yangiliklar' element={<Yangiliklar/>}/>
+      <Route path='/news/:id' element={<Fullnews/>} />
       <Route path="/contact" element={<Contact/>}/>
-      <Route path='/information' element={<Fullnews/>}/>
+      {/* <Route path='/information' element={<Fullnews/>}/> */}
       <Route path='/arxiv' element={<ArxivMain/>}/>
       {/* <Route path='/arxivtada' element={<ArxivFull/>}/> */}
     </Route>

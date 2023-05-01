@@ -2,3 +2,10 @@
     font-size: 20px;
     margin-bottom: 3px;
 }
+.clicle_loader{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

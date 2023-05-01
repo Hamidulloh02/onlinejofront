@@ -12,6 +12,7 @@ import "./yangiliklar.css"
 import axios from 'axios'
 import { useLocation } from 'react-router-dom';
 import Fullnews from '../../FullNews/Fullnews';
+import CircularProgress from '@mui/material/CircularProgress';
 function TabPanel(props, name) {
   const { children, value, index, ...other } = props;
   let location = useLocation()
@@ -58,7 +59,6 @@ export default function BasicTabs(props) {
   const [page, setPage] = useState(1)
   const [countPage , setCountPage] = useState(0)
   let location = useLocation()
-  console.log(process.env.REACT_APP_API)
   useEffect(() => {
       setCountPage(100) 
       axios.get(`${process.env.REACT_APP_API}/api/pagination?page=${page}&search=Yangiliklar`)
@@ -80,7 +80,6 @@ export default function BasicTabs(props) {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
   }, [page])
-  console.log(Yangiliklardata)
   const handleChange = (event, newValue) => {
     setValue(newValue)
   };
@@ -91,117 +90,139 @@ export default function BasicTabs(props) {
   return (
     <Box sx={{ width: '100%' }} className="news__select_menu">
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={location.state.id }
-          onChange={handleChange}
-          aria-label="basic tabs example"
-          variant="scrollable"
-          scrollButtons="auto"
-          className='select__menu'>
-          <Tab label={<div className='new__btn'>Yangiliklar</div>} {...a11yProps(location.state.id)} />
-          <Tab label={<div className='new__btn'>Maqolalar</div>} {...a11yProps(location.state.id)} />
-          <Tab label={<div className='new__btn'>Jurnaldan</div>} {...a11yProps(location.state.id)} />
-          <Tab label={<div className='new__btn'>Arxiv</div>} {...a11yProps(location.state.id)} />
-        </Tabs>
       </Box>
       <TabPanel value={location.state.id } index={0}>
-        <div className="container new__full mt-5">
+        <div className="container new__full mt-4">
+          <h2 className='text-center mb-4 categoryTitlename'>Yangiliklar</h2>
           <div className="row">
             {
+              (Maqolalardata.length>0)?
               Yangiliklardata.map((e, i) => {
                 return (
-                  <>
-                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                  <>    
+                      <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                       <Link to={`/news/${e.id}`} state={Yangiliklardata[i]} className='titlenews'> 
                       <div data-aos="zoom-in" className="new__card">
                         <div className='new__img_div me-3'>
                           <img className='new__img' src={e.profile} alt="" />
                         </div>
                         <div>
-                          <Link to="/information" state={Yangiliklardata[i]} className="titlenews"><h6>{e.title}</h6></Link>
-                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>2022-10-17 | 19.43</span></div>
+                          <h6 className="titlenews">{e.title}</h6>
+                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>{((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</span></div>
                         </div>
                       </div>
+                       </Link>
                     </div>
                   </>
                 )
               })
+              :
+              <div className='text-center'>
+                < CircularProgress/>
+              </div>
             }
           </div>
         </div>
         <Pagination page={page} onChange={handleChangePage}  count={countPage} color="primary" />
       </TabPanel>
       <TabPanel value={location.state.id } index={1}>
-        <div className="container new__full mt-5">
+        <div className="container new__full mt-4">
+        <h2 className='text-center mb-4 categoryTitlename'>Maqolalar</h2>
           <div className="row">
             {
+              (Maqolalardata.length >0)?
+             
               Maqolalardata.map((e, i) => {
                 return (
                   <>
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                    <Link to={`/news/${e.id}`} state={Maqolalardata[i]} className="titlenews">
                       <div data-aos="zoom-in" className="new__card">
                         <div className='new__img_div me-3'>
                           <img className='new__img' src={e.profile} alt="" />
                         </div>
                         <div>
-                          <Link to="/information" state={Maqolalardata[i]} className="titlenews"><h6>{e.title}</h6></Link>
-                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>2022-10-17 | 19.43</span></div>
+                          <h6 className="titlenews">{e.title}</h6>
+                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>{((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</span></div>
                         </div>
                       </div>
+                      </Link>
                     </div>
                   </>
                 )
               })
+              :
+              <div className='text-center'>
+                 < CircularProgress/>
+              </div>
             }
           </div>
         </div>
         <Pagination page={page} onChange={handleChangePage}  count={countPage} color="primary" />
       </TabPanel>
       <TabPanel value={location.state.id } index={2}>
-        <div className="container new__full mt-5">
+        <div className="container new__full mt-4">
+        <h2 className='text-center mb-4 categoryTitlename'>Jurnaldan</h2>
           <div className="row">
             {
+              (Maqolalardata.length>0)?
               Journaldata.map((e, i) => {
                 return (
                   <>
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                    <Link to={`/news/${e.id}`} state={Journaldata[i]} className="titlenews">
                       <div data-aos="zoom-in" className="new__card">
                         <div className='new__img_div me-3'>
                           <img className='new__img' src={e.profile} alt="" />
                         </div>
                         <div>
-                          <Link to="/information" state={Journaldata[i]} className="titlenews"><h6>{e.title}</h6></Link>
-                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>2022-10-17 | 19.43</span></div>
+                          <h6 className="titlenews">{e.title}</h6>
+                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>{((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</span></div>
                         </div>
                       </div>
+                      </Link>
                     </div>
                   </>
                 )
               })
+              :
+              <div className='text-center'>
+                < CircularProgress/>
+              </div>
             }
           </div>
         </div>
         <Pagination page={page} onChange={handleChangePage}  count={countPage} color="primary" />
       </TabPanel>
       <TabPanel value={location.state.id } index={3}>
-        <div className="container new__full mt-5">
+        <div className="container new__full mt-4">
+        <h2 className='text-center mb-4 categoryTitlename'>Arxiv</h2>
           <div className="row">
             {
+              (Maqolalardata.length>0)?
               Arxivdata.map((e, i) => {
                 return (
                   <>
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                    <Link to={`/news/${e.id}`} state={Arxivdata[i]} className="titlenews">
                       <div data-aos="zoom-in" className="new__card">
                         <div className='new__img_div me-3'>
                           <img className='new__img' src={e.profile} alt="" />
                         </div>
                         <div>
-                          <Link to="/information" state={Arxivdata[i]} className="titlenews"><h6>{e.title}</h6></Link>
-                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>2022-10-17 | 19.43</span></div>
+                          <h6>{e.title}</h6>
+                          <div><button className='new__btn'>{e.category.name}</button><span className='new__data'>{((e.created_at).toString()).slice(0,10)} | {((e.created_at).toString()).slice(11,16)}</span></div>
                         </div>
                       </div>
+                      </Link>
                     </div>
                   </>
                 )
               })
+              :
+              <div className='text-center'>
+                < CircularProgress/>
+              </div>
             }
           </div>
         </div>

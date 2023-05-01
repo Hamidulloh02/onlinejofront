@@ -21,7 +21,6 @@ function AllCarus() {
         var JurnalsahifalaridaFilter = dataAll.filter(news => { return (news.category.name === "Jurnaldan") });
         var MaqolalarFilter = dataAll.filter(news => { return (news.category.name === "Maqolalar") });
       }
-  console.log(dataAll)
   return (
     <>
     <div className='allCarusDekstop'>

@@ -71,7 +71,7 @@ function Mamage() {
                             <p>“Guliston” va “Teatr” jurnallari Birlashgan tahririyati bosh muharriri o‘rinbosari </p>
                             <p>(«Teatr» jurnali nashri uchun mas’ul)</p>
                             <p><b>Qabul kunlari:</b>  Dushanba, 10:00-12:00</p>
-                            <p><b>Telefon raqami:</b>  (71) 244-45-04</p>
+                            <p><b>Telefon raqami:</b>  (71) 244-41-62</p>
                             <p><b>E-Mail:</b>info@online-journal.uz</p>
                             </div> 
                         </div>

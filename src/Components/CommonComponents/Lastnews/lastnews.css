@@ -1,3 +1,6 @@
+.pages__teatr{
+    width: 400px !important;
+}
 .last__news{
     width: 400px;
     /* margin-left: 19px; */
@@ -38,5 +41,19 @@
 @media(max-width:430px){
     .last__news{
         width: 380px;
+    }
+    .pages__teatr{
+        width: 380px !important;
+    }
+}
+@media(max-width:390px){
+    .last__news{
+        width: 350px;
+    }
+    .pages__teatr{
+        width: 350px !important;
+    }
+    .lastnewsfull{
+        padding-left: 20px !important;
     }
 }

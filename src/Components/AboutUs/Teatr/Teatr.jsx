@@ -9,6 +9,9 @@ import teatrjson from "./teatrjson.json"
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 
+//lazy
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 function Teatr() {
     const [array, setarray] = useState([])
     let data = []
@@ -17,14 +20,14 @@ function Teatr() {
             .then((res) => {
                 setarray(res.data)
             })
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }, [])
-    {
-        for (let i = 0; i < array.length - 2; i++) {
-            data.push(array[i])
-        }
-    }
+    // {
+    //     for (let i = 0; i < array.length - 2; i++) {
+    //         data.push(array[i])
+    //     }
+    // }
     function handleClick(event) {
         event.preventDefault();
         console.info('You clicked a breadcrumb.');
@@ -48,6 +51,13 @@ function Teatr() {
                 <div className="row">
                     <div className="col-lg-8 col-md-6 col-sm-12">
                         <h3 className='text-center m-4'>“Teatr” jurnali haqida</h3>
+                        <div className='InformationPage'>
+                            <LazyLoadImage
+                                className='InformationPageImg'
+                                alt="AboutWeImg"
+                                effect="blur"
+                                src="./images/TeatrCarus/teatr02.jpg" />
+                        </div>
                         <br />
                         <p>“Teatr” adabiy-badiiy, axborot-reklama jurnali O‘zbekiston Respublikasi Prezidentining “O‘zbekiston teatr san’atini rivojlantirish to‘g‘risida”gi 1998 yil 26 martdagi PF-1980-son farmoniga binoan Vazirlar Mahkamasining 22 may 1998 yil № 223 qarori bilan tashkil etilgan.</p>
                         <br />
